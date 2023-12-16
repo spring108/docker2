@@ -5,8 +5,8 @@ services:
     build:
       dockerfile: assembly.Dockerfile
     volumes:
-      - type: volume
-        source: folder_common
+      - type: bind
+        source: /tmp/folder_common
         target: /tmp/folder_common
   prod:
     build:
@@ -15,11 +15,11 @@ services:
       - '80:80'
       - '443:443'
     volumes:
-      - type: volume
-        source: folder_common
+      - type: bind
+        source: /tmp/folder_common
         target: /tmp/folder_common
     depends_on:
       - assembly
 
-volumes:
-  folder_common:
+#volumes:
+#  folder_common:
