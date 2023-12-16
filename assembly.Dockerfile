@@ -6,6 +6,11 @@
 
 FROM ubuntu:20.04
 
+
+RUN mkdir /tmp/folder_common
+RUN mkdir /tmp/folder_log
+
+
 #RUN echo "========================" >> /tmp/folder_log/assembly.log
 #RUN echo "BEGIN" >> /tmp/folder_log/assembly.log
 
