@@ -3,19 +3,16 @@ version: '3'
 services:
   assembly:
     build:
-      #context: ./docker
       dockerfile: assembly.Dockerfile
     volumes:
-      - "/tmp/folder_common:/tmp/folder_common"
-
+      - '/var/folder_common:/var/folder_common'
   prod:
     build:
-      #context: ./docker
       dockerfile: prod.Dockerfile
     ports:
       - '80:80'
       - '443:443'
     volumes:
-      - "/tmp/folder_common:/tmp/folder_common"
+      - '/var/folder_common:/var/folder_common'
     depends_on:
       - assembly
