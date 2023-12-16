@@ -19,6 +19,7 @@
     - chmod +x /bin/docker-compose
     - docker-compose --version
   - #### Запуск сервисов:
+    - mkdir /tmp/folder_common
     - cd /tmp
     - git clone https://github.com/spring108/docker2.git
     - cd /tmp/docker2
