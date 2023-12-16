@@ -7,8 +7,8 @@
 FROM ubuntu:20.04
 
 
-RUN mkdir /tmp/folder_common
-RUN touch /tmp/folder_common/touch_test
+RUN mkdir /var/folder_common
+RUN touch /var/folder_common/touch_test
 
 #set time zone for java
 RUN ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime
