@@ -22,7 +22,8 @@
     - cd /tmp
     - git clone https://github.com/spring108/docker2.git
     - cd /tmp/docker2
-    - docker-compose up -d
     - docker-compose build --no-cache
+    - docker-compose up -d
+    - go to http://158.160.46.233/hello/
 
 
