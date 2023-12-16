@@ -19,7 +19,7 @@ RUN apt update
 RUN apt install git -y
 
 RUN apt-get update
-RUN apt-get install systemd
+RUN apt-get install systemd -y
 RUN timedatectl set-timezone Europe/Moscow
 RUN apt install default-jdk -y
 #RUN apt install openjdk-17-jdk -y
