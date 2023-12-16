@@ -17,7 +17,7 @@ services:
       - '443:443'
     volumes:
       - "/tmp/folder_common:/tmp/folder_common"
-    depens_on:
-      assembly:
-        condition: service_healthy
-        required: true
+#    depens_on:
+#      assembly:
+#        condition: service_healthy
+#        required: true
