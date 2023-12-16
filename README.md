@@ -22,6 +22,7 @@
     - cd /tmp
     - git clone https://github.com/spring108/docker2.git
     - cd /tmp/docker2
+    - git pull
     - docker-compose up -d
 
 
