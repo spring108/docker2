@@ -36,13 +36,10 @@ RUN cd /tmp && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hell
 
 #RUN echo "GIT CLONE success" >> /tmp/folder_log/assembly.log
 
-RUN cd /tmp/boxfuse-sample-java-war-hello && mvn package
+RUN cd /tmp/boxfuse-sample-java-war-hello && mvn package && mv /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war /tmp/folder_common/hello.war
 
 #RUN echo "MAKE PROJECT success" >> /tmp/folder_log/assembly.log
 
-RUN ls /tmp/boxfuse-sample-java-war-hello/target/
-RUN mv /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war /tmp/folder_common/hello.war
-RUN ls /tmp/folder_common
 
 #RUN echo "MOVE ARTEFACT success" >> /tmp/folder_log/assembly.log
 #RUN echo "END" >> /tmp/folder_log/assembly.log
