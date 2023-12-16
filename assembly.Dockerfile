@@ -11,6 +11,11 @@ RUN mkdir /tmp/folder_common
 RUN mkdir /tmp/folder_log
 
 
+#set time zone for java
+RUN unlink /etc/localtime
+RUN ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+
+
 #RUN echo "========================" >> /tmp/folder_log/assembly.log
 #RUN echo "BEGIN" >> /tmp/folder_log/assembly.log
 
@@ -18,9 +23,6 @@ RUN apt update
 
 RUN apt install git -y
 
-RUN apt-get update
-RUN apt-get install systemd -y
-RUN timedatectl set-timezone Europe/Moscow
 RUN apt install default-jdk -y
 #RUN apt install openjdk-17-jdk -y
 #RUN echo "JAVA installed" >> /tmp/folder_log/assembly.log
