@@ -12,7 +12,7 @@
     - sudo apt-get update
     - sudo apt-get install mc -y
     - sudo mc
-    - apt install docker.io
+    - apt install docker.io -y
     - cd /tmp
     - wget https://github.com/docker/compose/releases/download/v2.23.3/docker-compose-linux-x86_64
     - mv docker-compose-linux-x86_64 /bin/docker-compose

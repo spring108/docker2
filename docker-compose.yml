@@ -16,10 +16,8 @@ services:
     ports:
       - '80:80'
       - '443:443'
-    #links: #если сервисы общаются между собой Для v2 только
-    #  - 'php'
     volumes:
       - '/tmp/folder_common:/tmp/folder_common'
       - '/tmp/folder_log:/tmp/folder_log'
-    depens_on: #run this service after "assembly" service only
-      - assembly
+#    depens_on:
+#      - assembly
