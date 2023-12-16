@@ -5,9 +5,7 @@ services:
     build:
       dockerfile: assembly.Dockerfile
     volumes:
-      - type: bind
-        source: /tmp/folder_common
-        target: /tmp/folder_common
+      - '/tmp/folder_common:/tmp/folder_common'
   prod:
     build:
       dockerfile: prod.Dockerfile
@@ -20,6 +18,3 @@ services:
         target: /tmp/folder_common
     depends_on:
       - assembly
-
-#volumes:
-#  folder_common:
