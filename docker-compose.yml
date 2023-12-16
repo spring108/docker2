@@ -9,15 +9,15 @@ services:
       - '/tmp/folder_common:/tmp/folder_common'
       - '/tmp/folder_log:/tmp/folder_log'
 
-  prod: #second PROD service
-    build:
-      #context: ./docker
-      dockerfile: prod.Dockerfile
-    ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      - '/tmp/folder_common:/tmp/folder_common'
-      - '/tmp/folder_log:/tmp/folder_log'
+#  prod: #second PROD service
+#    build:
+#      #context: ./docker
+#      dockerfile: prod.Dockerfile
+#    ports:
+#      - '80:80'
+#      - '443:443'
+#    volumes:
+#      - '/tmp/folder_common:/tmp/folder_common'
+#      - '/tmp/folder_log:/tmp/folder_log'
 #    depens_on:
 #      - assembly
