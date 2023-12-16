@@ -1,22 +1,21 @@
 ---
 version: '3'
 services:
-  assembly: #first assembly service
+  assembly:
     build:
       #context: ./docker
       dockerfile: assembly.Dockerfile
     volumes:
       - "/tmp/folder_common:/tmp/folder_common"
 
-#  prod: #second PROD service
-#    build:
-#      #context: ./docker
-#      dockerfile: prod.Dockerfile
-#    ports:
-#      - '80:80'
-#      - '443:443'
-#    volumes:
-#      - '/tmp/folder_common:/tmp/folder_common'
-#      - '/tmp/folder_log:/tmp/folder_log'
-#    depens_on:
-#      - assembly
+  prod:
+    build:
+      #context: ./docker
+      dockerfile: prod.Dockerfile
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - "/tmp/folder_common:/tmp/folder_common"
+    depens_on:
+      - assembly
