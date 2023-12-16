@@ -12,7 +12,6 @@ RUN mkdir /tmp/folder_log
 
 
 #set time zone for java
-RUN unlink /etc/localtime
 RUN ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 
 
