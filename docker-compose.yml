@@ -1,5 +1,5 @@
 ---
-version: '3'
+version: '3.8'
 services:
   assembly:
     build:
@@ -20,3 +20,6 @@ services:
         target: /tmp/folder_common
     depends_on:
       - assembly
+
+#volumes:
+#  folder_common:
