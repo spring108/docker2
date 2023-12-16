@@ -6,7 +6,7 @@ services:
       #context: ./docker
       dockerfile: assembly.Dockerfile
     volumes:
-      - '/tmp/folder_common:/tmp/folder_common'
+      - "/tmp/folder_common:/tmp/folder_common"
 
 #  prod: #second PROD service
 #    build:
