@@ -22,3 +22,4 @@ RUN mkdir /tmp/folder_common && \
     cd /tmp/boxfuse-sample-java-war-hello && \
     mvn package
 
+#RUN mv /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war /tmp/common_folder/hello.war
