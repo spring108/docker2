@@ -7,9 +7,6 @@
 FROM ubuntu:20.04
 
 
-#RUN mkdir /tmp/folder_common
-RUN touch /tmp/folder_common/touch_test
-
 #set time zone for java
 RUN ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 
@@ -35,7 +32,12 @@ RUN cd /tmp && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hell
 
 #RUN echo "GIT CLONE success" >> /tmp/folder_log/assembly.log
 
-RUN cd /tmp/boxfuse-sample-java-war-hello && mvn package && cp /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war /tmp/folder_common/hello.war
+RUN mkdir /tmp/folder_common && \
+    cd /tmp/boxfuse-sample-java-war-hello && \
+    mvn package && \
+    cp /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war /tmp/folder_common/hello.war
+
+
 
 #RUN echo "MAKE PROJECT success" >> /tmp/folder_log/assembly.log
 
