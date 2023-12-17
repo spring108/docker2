@@ -9,8 +9,11 @@ services:
         source: folder_common
         target: /tmp/boxfuse-sample-java-war-hello/target/
   prod:
-    build:
-      dockerfile: prod.Dockerfile
+    #build:
+    #  dockerfile: prod.Dockerfile
+    image: 'woahbase/alpine-tomcat:x86_64'
+    hostname: 'tomcat'
+    restart: always
     ports:
       - '8080:8080'
     volumes:
