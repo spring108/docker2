@@ -19,13 +19,11 @@
     - chmod +x /bin/docker-compose
     - docker-compose --version
   - #### Запуск сервисов:
-    - mkdir /tmp/folder_common
+    - #mkdir /tmp/folder_common
     - cd /tmp
     - git clone https://github.com/spring108/docker2.git
     - cd /tmp/docker2
-    - docker-compose build --no-cache
+    - #docker-compose build --no-cache
     - docker-compose up -d
-    - docker-compose logs
-    - go to http://178.154.202.77:8080/hello-1.0/
-
-
+    - #docker-compose logs
+    - go to http://51.250.75.22:8080/hello-1.0/
