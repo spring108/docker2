@@ -11,7 +11,7 @@ services:
   prod:
     #build:
     #  dockerfile: prod.Dockerfile
-    image: 'woahbase/alpine-tomcat:x86_64'
+    image: 'tomcat:jre8-alpine'
     hostname: 'tomcat'
     restart: always
     ports:

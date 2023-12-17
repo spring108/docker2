@@ -1,7 +1,6 @@
 # dockerfile for PROD service
 
-#FROM woahbase/alpine-base:x86_64
-FROM woahbase/alpine-tomcat:x86_64
+FROM tomcat:jre8-alpine
 
 
 #EXPOSE 8080
