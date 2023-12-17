@@ -26,6 +26,6 @@
     - docker-compose build --no-cache
     - docker-compose up -d
     - docker-compose logs
-    - go to http://158.160.46.233/hello/
+    - go to http://178.154.202.77:8080/hello/
 
 
