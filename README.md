@@ -25,6 +25,7 @@
     - cd /tmp/docker2
     - docker-compose build --no-cache
     - docker-compose up -d
+    - docker-compose logs
     - go to http://158.160.46.233/hello/
 
 
