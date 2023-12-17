@@ -7,7 +7,7 @@ services:
     volumes:
       - type: volume
         source: folder_common
-        target: /tmp/folder_common
+        target: /tmp/boxfuse-sample-java-war-hello/target/
   prod:
     build:
       dockerfile: prod.Dockerfile
@@ -17,7 +17,7 @@ services:
     volumes:
       - type: volume
         source: folder_common
-        target: /tmp/folder_common
+        target: /opt/tomcat/webapps/
     depends_on:
       - assembly
 volumes:
