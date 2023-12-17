@@ -20,7 +20,8 @@ RUN cd /tmp && \
 
 RUN mkdir /tmp/folder_common && \
     cd /tmp/boxfuse-sample-java-war-hello && \
-    mvn package && \
-    cp /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war /tmp/folder_common/hello.war
+    mvn package
 
-RUN ls /tmp/folder_common/
+# && \
+#    cp /tmp/boxfuse-sample-java-war-hello/target/hello-1.0.war /tmp/folder_common/hello.war
+#RUN ls /tmp/folder_common/
